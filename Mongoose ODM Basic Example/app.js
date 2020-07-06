@@ -12,14 +12,29 @@ connect.then((db) => {
 
     console.log("Connected to MongoDB!");
 
-    // Creating a new Dish
-    let newDish = Dishes({
+    // // Creating a new Dish
+    // let newDish = Dishes({
+    //     name: "Pizza",
+    //     description: "test"
+    // });
+
+    // // Saving the dish to the database.
+    // newDish.save().then((dish) => {
+    //     console.log(dish);
+
+    //     // Finding all the dishes and using exec to ensure that find() is executed and it will return a promise.
+    //     return Dishes.find({}).exec();
+
+    // }).then((dishes) => {
+
+    // OR 
+
+    // we can directly create and save dish using .create()
+
+    Dishes.create({
         name: "Pizza",
         description: "test"
-    });
-
-    // Saving the dish to the database.
-    newDish.save().then((dish) => {
+    }).then((dish) => {
         console.log(dish);
 
         // Finding all the dishes and using exec to ensure that find() is executed and it will return a promise.
