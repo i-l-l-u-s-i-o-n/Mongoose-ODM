@@ -1,3 +1,4 @@
+// by Shivam Shukla
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
@@ -26,6 +27,8 @@ const commentSchema = new Schema({
         type: String,
         required: true
     }
+}, {
+    timestamps: true
 });
 
 const dishSchema = new Schema({
